@@ -8,7 +8,7 @@ const server = buildTestServer()
 const productRepository = new MockProductRepository()
 const productController = new ProductController(productRepository)
 
-server.addController(ProductController.name, productController)
+server.setController(ProductController, productController)
 
 describe('GET /products', () => {
     it('should return a 200 status and 2 products', async () => {

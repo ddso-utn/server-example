@@ -9,8 +9,9 @@ const productController = new ProductController(productRepository)
 
 const server = new Server(
     express(),
-    config.SERVER_PORT
+    config.SERVER_PORT,
+    true
 )
-server.addController(ProductController.name, productController)
+server.setController(ProductController, productController)
 server.configureRoutes()
 server.launch()

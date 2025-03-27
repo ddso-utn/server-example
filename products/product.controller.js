@@ -1,7 +1,6 @@
 export class ProductController {
     constructor(productRepository) {
         this.productRepository = productRepository
-        console.log(this.productRepository)
     }
 
     findAll(req, res) {

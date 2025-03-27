@@ -3,11 +3,14 @@ import { ProductController } from "./products/product.controller.js"
 export class Server {
 
     #controllers = {}
+    #app
 
     constructor(app, port = 3000) {
-        this.app = app
+        this.#app = app
         this.port = port
     }
+
+    get app() { return this.#app }
 
     addController(name, controller) {
         this.#controllers[name] = controller

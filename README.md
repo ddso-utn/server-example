@@ -7,4 +7,5 @@ To run in dev mode:
  - `npm run dev`
 
 Must define the following environment variables:
+
 `SERVER_PORT`: the port in which the server will run.
